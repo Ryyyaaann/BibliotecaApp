@@ -1,0 +1,32 @@
+﻿@page
+@model BibliotecaApp.Pages.ListaLivroModels
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Livros</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <h1>Lista de Livros</h1>
+
+    <table>
+        <tr>
+            <th>Nome do Livro</th>
+            <th>Autor</th>
+            <th>Ano</th>
+            <th>Sinopse</th>
+        </tr>
+        @foreach (var livro in Model.Livros)
+        {
+            <tr>
+                <td>@livro.nomeLivro</td>
+                <td>@livro.autor</td>
+                <td>@livro.ano</td>
+                <td>@livro.sinopse</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
+
