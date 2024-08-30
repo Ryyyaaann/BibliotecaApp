@@ -25,7 +25,7 @@ namespace BibliotecaApp.Pages
 
             _context.Livros.Add(Livro);
             _context.SaveChanges();
-            return RedirectToPage("./Index");
+            return RedirectToPage("./ListaLivro");
         }
     }
 }

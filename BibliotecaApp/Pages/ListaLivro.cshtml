@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Lista de Livros</title>
-    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/lista.css" />
 </head>
 <body>
     <h1>Lista de Livros</h1>
@@ -16,6 +16,7 @@
             <th>Autor</th>
             <th>Ano</th>
             <th>Sinopse</th>
+            <th>Editar / Excluir</th>
         </tr>
         @foreach (var livro in Model.Livros)
         {
@@ -24,6 +25,10 @@
                 <td>@livro.autor</td>
                 <td>@livro.ano</td>
                 <td>@livro.sinopse</td>
+                <td class="edicao">
+                    <a asp-page="./EditarL" asp-route-id="@livro.id">✏</a> |
+                    <a asp-page="./DeleteL" asp-route-id="@livro.id">🗑</a>
+                </td>
             </tr>
         }
     </table>

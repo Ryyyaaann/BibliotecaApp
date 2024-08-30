@@ -40,9 +40,13 @@ button.accept-policy {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background: rgb(10,1,162);
+    background: linear-gradient(90deg, rgba(10,1,162,1) 0%, rgba(45,154,189,1) 66%, rgba(48,166,191,1) 71%, rgba(0,212,255,1) 100%);
+    color: #ffffff !important; /* Muda a cor para branco */
+    ;
 }

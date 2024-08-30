@@ -1,0 +1,32 @@
+﻿@page "{id:int}"
+@model BibliotecaApp.Pages.EditarLModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Livro</title>
+    <link rel="stylesheet" href="/css/editar.css" />
+</head>
+<body>
+    <h1>Editar Livro</h1>
+    <div class="form">
+        <form method="post">
+            <input type="hidden" asp-for="Livro.id" />
+            <label for="NomeLivro">Nome:</label>
+            <input type="text" asp-for="Livro.nomeLivro" required /><br />
+            <label for="Ano">Ano:</label>
+            <input type="number" asp-for="Livro.ano" required /><br />
+            <label for="Sinopse">Sinopse:</label>
+            <input type="text" asp-for="Livro.sinopse" required /><br />
+            <label for="Autor">Autor:</label>
+            <input type="text" asp-for="Livro.autor" required /><br />
+            <button type="submit">Salvar</button>
+
+        <a asp-page="./ListaLivro"><button >Cancelar</button></a>
+        </form>
+
+    </div>
+    
+</body>
+</html>

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Clientes</title>
-    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/lista2.css" />
 </head>
 <body>
     <h1>Lista de Clientes</h1>
@@ -15,6 +15,7 @@
             <th>Idade</th>
             <th>Endereço</th>
             <th>Contato</th>
+            <th>Editar / Excluir</th>
         </tr>
         @foreach (var cliente in Model.Clientes)
         {
@@ -23,9 +24,9 @@
                 <td>@cliente.idade</td>
                 <td>@cliente.endereco</td>
                 <td>@cliente.contato</td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@cliente.idcliente">Editar</a> |
-                    <a asp-page="./Delete" asp-route-id="@cliente.idcliente">Remover</a>
+                <td class="delete">
+                    <a asp-page="./Edit" asp-route-id="@cliente.idcliente">✏</a> |
+                    <a asp-page="./Delete" asp-route-id="@cliente.idcliente">🗑</a>
                 </td>
             </tr>
         }
